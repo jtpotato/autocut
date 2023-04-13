@@ -12,6 +12,10 @@ export const error = (text: string) => {
     return gradient("#ff0000", "#ff0090")(text)
 }
 
+export const warn = (text: string) => {
+    return gradient("#ffa400", "#fbff00")(text)
+}
+
 export const debug = (text: any) => {
     if (process.env.DEV) {
         console.log(gradient("#573500", "#4a4a4a")(JSON.stringify(text)))
