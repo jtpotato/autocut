@@ -2,12 +2,13 @@
   "name": "imaginaition",
   "version": "1.0.0",
   "description": "",
+  "main": "index.js",
   "scripts": {
-    "dev": "concurrently \"cd src/ui && npm run dev\" \"cd src/electron && npm run dev\""
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "concurrently": "^8.0.1"
+    "typescript": "^5.0.4"
   }
 }
