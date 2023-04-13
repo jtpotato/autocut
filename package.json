@@ -1,0 +1,13 @@
+{
+  "name": "imaginaition",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "dev": "concurrently \"cd src/ui && npm run dev\" \"cd src/electron && npm run dev\""
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "concurrently": "^8.0.1"
+  }
+}
