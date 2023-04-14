@@ -1,6 +1,6 @@
 import glob
 import os
-import imaginaition_logging
+from imaginaition_logging import *
 import subprocess
 
 
@@ -17,14 +17,15 @@ def run(arguments: list):
     try:
         input_folder = arguments[2]
     except:
-        imaginaition_logging.error("No input folder provided")
+        error("No input folder provided")
         exit()
     if input_folder:
         videos = get_videos_in_folder(input_folder)
         for video in videos:
             try:
-                imaginaition_logging.feedback(f"Cutting video: {video}")
+                feedback(f"Cutting video: {video}")
                 os.makedirs("./cut-videos", exist_ok=True)
                 subprocess.run(["auto-editor", f"{video}", "-o", f"./cut-videos/{os.path.basename(video)}"], check=True)
             except Exception as e:
-                imaginaition_logging.error(f"Error cutting video: {e}")
+                error(f"Error cutting video: {e}")
+        neutral("Finished cutting videos. Import them into your favourite editor :D")
