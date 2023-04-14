@@ -25,7 +25,7 @@ def run(arguments: list):
             try:
                 feedback(f"Cutting video: {video}")
                 os.makedirs("./cut-videos", exist_ok=True)
-                subprocess.run(["auto-editor", f"{video}", "-o", f"./cut-videos/{os.path.basename(video)}"], check=True)
+                subprocess.run(["auto-editor", f"{video}", "--margin", "0.05sec", "-o", f"./cut-videos/{os.path.basename(video)}"], check=True)
             except Exception as e:
                 error(f"Error cutting video: {e}")
         neutral("Finished cutting videos. Import them into your favourite editor :D")

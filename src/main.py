@@ -16,7 +16,7 @@ if appName == None:
 
 help_commands = ["help", "--help", "-h"]
 if appName in help_commands:
-    help.run()
+    help.run(sys.argv)
 
 if appName == "cut":
     imaginaition_logging.emphasis("Running app: cut")
