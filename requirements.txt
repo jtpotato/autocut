@@ -1,8 +1,0 @@
-ae-ffmpeg==1.1.1
-auto-editor==23.12.1
-autopep8==2.0.2
-av==10.0.0
-numpy==1.24.2
-Pillow==9.4.0
-pycodestyle==2.10.0
-rgbprint==4.0.2

@@ -1,8 +1,0 @@
-venv/
-pip-install-test-venv/
-__pycache__/
-videos/
-cut-videos/
-build/
-dist/
-imaginaition.egg-info/
