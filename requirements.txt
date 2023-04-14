@@ -1,0 +1,4 @@
+auto-editor
+autopep8
+pip-chill
+rgbprint

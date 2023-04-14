@@ -1,4 +1,4 @@
-from imaginaition_logging import *
+from imaginaition.imaginaition_logging import *
 
 def run(args: list):
     if (len(args) == 2):
@@ -6,7 +6,7 @@ def run(args: list):
         neutral(indent(1) + "-h, --help, help: Shows this help page. Welcome! Run help <app> to see the help page for each app.\n")
         emphasis(indent(1) + "Apps:", 2)
         emphasis(indent(2) + "cut: Cuts videos in a folder", 2)
-        emphasis(indent(2) + "imagine: Uses Stable Diffusion in the cloud to generate an image.", 2)
+        emphasis(indent(2) + "imagine: [Development] Uses Stable Diffusion in the cloud to generate an image.", 2)
         exit()
 
     if args[2] == "cut":

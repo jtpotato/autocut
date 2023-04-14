@@ -1,6 +1,6 @@
 import glob
 import os
-from imaginaition_logging import *
+from imaginaition.imaginaition_logging import *
 import subprocess
 
 
