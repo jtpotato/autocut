@@ -23,12 +23,14 @@ function CutApp(inputFilePath: string) {
       console.log(debug("auto-editor may not be up to date... Fixing..."));
       let pip = spawn("pip", ["install", "auto-editor", "--upgrade"]);
       pip.on("close", (code) => {
-        console.log(emphasis("Try running it again."));
+        console.log(emphasis("Fixed. Try running again."));
       });
     });
     autoEditor.stdout.on("data", (data) => {
-      console.log(data.toString());
+      process.stdout.cursorTo(0);
+      process.stdout.write(data.toString());
     });
+    console.log(debug("Starting..."))
   }
 }
 
