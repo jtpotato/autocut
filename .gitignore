@@ -3,3 +3,4 @@ videos/
 .DS_Store
 *.tgz
 dist/
+bin/
