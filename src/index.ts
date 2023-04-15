@@ -1,9 +1,9 @@
 #! /usr/bin/env node
 
 import CutApp from "./apps/cut";
-import { emphasis, error, title } from "./utils/gradients";
+import { error, title } from "./utils/gradients";
 
-let version = "1.0.1";
+let version = "1.0.2";
 
 async function main() {
   console.log(title(`Autocut ${version}`));
