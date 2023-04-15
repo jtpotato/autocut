@@ -2,14 +2,15 @@
   "name": "autocut",
   "version": "1.0.1",
   "description": "",
-  "main": "dist/index.js",
+  "main": "./bin/index.js",
   "scripts": {
     "dev": "ts-node src/index.ts",
-    "build": "tsc"
+    "build": "tsc && npm pack --pack-destination ./dist"
   },
   "bin": {
     "autocut": "./bin/index.js"
   },
+  "files": ["bin"],
   "author": "",
   "license": "ISC",
   "dependencies": {
