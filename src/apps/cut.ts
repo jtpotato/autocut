@@ -1,5 +1,5 @@
 import path from "path";
-import fs from "fs"
+import fs from "fs";
 import getAllVideoFiles from "../utils/getvideofiles";
 import { spawn } from "child_process";
 import { debug, emphasis } from "../utils/gradients";
@@ -27,10 +27,9 @@ function CutApp(inputFilePath: string) {
       });
     });
     autoEditor.stdout.on("data", (data) => {
-      let dataString: string = data.toString();
-      console.log(dataString.match(/\d+(\.\d+)?%/)![0]);
+      console.log(data.toString());
     });
   }
 }
 
-export default CutApp
+export default CutApp;
