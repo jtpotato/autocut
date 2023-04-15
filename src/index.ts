@@ -1,3 +1,5 @@
+#! /usr/bin/env node
+
 import CutApp from "./apps/cut";
 import { emphasis, error, title } from "./utils/gradients";
 
