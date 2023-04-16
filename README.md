@@ -1,9 +1,11 @@
 Automatically cut videos.
 
+![A demo of how it works](images/Demo%201.png)
+
 # Installation
 Incredibly simple.
 ```
-npm i -g https://github.com/jtpotato/autocut/releases/download/v1.0.1/autocut-1.0.1.tgz
+npm i -g https://github.com/jtpotato/autocut/releases/download/v1.0.2/autocut-1.0.2.tgz
 autocut <video directory here>
 ```
 (Assumes `Node.js` and `npm` are installed)
