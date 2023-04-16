@@ -6,7 +6,7 @@ Automatically cut the silence from videos with a pretty CLI ✨
 # Installation
 Simple. Fast.
 ```
-npm i -g https://github.com/jtpotato/autocut/releases/download/v1.0.4/autocut-1.0.4.tgz
+npm i -g https://github.com/jtpotato/autocut/releases/download/v2.0.0/autocut-2.0.0.tgz
 cd <directory where the videos are>
 autocut
 ```

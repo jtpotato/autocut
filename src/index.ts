@@ -4,7 +4,7 @@ import fs from 'fs/promises';
 import { exec } from 'child_process';
 import { debug, emphasis, error, title } from "./utils/gradients.js";
 
-console.log(title("Autocut 1.0.4 🚀"))
+console.log(title("Autocut 2.0.0 🚀"))
 
 // Create concat-list.txt with filenames of all .MOV files in the current directory
 async function main() {
