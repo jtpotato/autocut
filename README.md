@@ -1,4 +1,4 @@
-Automatically cut videos.
+Automatically cut the silence from videos with a pretty CLI ✨
 
 ![A demo of how it works](images/Demo%201.png)
 
