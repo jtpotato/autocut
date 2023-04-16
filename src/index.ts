@@ -3,7 +3,7 @@
 import CutApp from "./apps/cut";
 import { error, title } from "./utils/gradients";
 
-let version = "1.0.2";
+let version = "1.0.3";
 
 async function main() {
   console.log(title(`Autocut ${version}`));

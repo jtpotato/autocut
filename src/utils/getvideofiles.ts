@@ -11,7 +11,7 @@ const getAllVideoFiles = (dirPath: string): string[] => {
     const stat = fs.statSync(filePath);
     if (stat.isDirectory()) {
       videoFiles.push(...getAllVideoFiles(filePath));
-    } else if (videoExtensions.includes(path.extname(filePath))) {
+    } else if (videoExtensions.includes(path.extname(filePath).toLowerCase())) {
       videoFiles.push(filePath);
     }
   });
