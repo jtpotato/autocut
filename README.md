@@ -8,4 +8,4 @@ Incredibly simple.
 npm i -g https://github.com/jtpotato/autocut/releases/download/v1.0.2/autocut-1.0.2.tgz
 autocut <video directory here>
 ```
-(Assumes `Node.js` and `npm` are installed)
+(Assumes `Node.js`, `npm` `Python` and `pip` are installed)
