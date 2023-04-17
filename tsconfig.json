@@ -1,6 +1,7 @@
 {
     "compilerOptions": {
         "outDir": "./bin",
-        "esModuleInterop": true
+        "esModuleInterop": true,
+        "lib": ["es2022"]
     }
 }
