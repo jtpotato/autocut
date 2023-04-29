@@ -10,8 +10,9 @@ console.log(title("Autocut 2.0.1 🚀"));
 async function main() {
   try {
     const files = await fs.readdir(".");
+    const extensions = [".mp4", ".mov", ".mkv"];
     const movFiles = files.filter((file) =>
-      file.toLowerCase().endsWith(".mov")
+      extensions.some((ext) => file.toLowerCase().endsWith(ext))
     );
     const concatList = movFiles.map((file) => `file ${file}`).join("\n");
     await fs.writeFile("concat-list.txt", concatList);
