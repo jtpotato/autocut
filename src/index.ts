@@ -4,7 +4,7 @@ import fs from "fs/promises";
 import { exec } from "child_process";
 import { debug, emphasis, error, title } from "./utils/gradients.js";
 
-console.log(title("Autocut 2.0.1 🚀"));
+console.log(title("Autocut 2.0.2 🚀"));
 
 // Create concat-list.txt with filenames of all .MOV files in the current directory
 async function main() {
@@ -16,6 +16,7 @@ async function main() {
     );
     const concatList = movFiles.map((file) => `file ${file}`).join("\n");
     await fs.writeFile("concat-list.txt", concatList);
+    await execPromise(`sed -i "s/\"/'/g" concat-list.txt`)
 
     // Use ffmpeg to concatenate the videos and output merged.mp4
     console.log(emphasis("Concatenating videos 🪄"));
