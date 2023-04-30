@@ -5,7 +5,7 @@
   "main": "./bin/index.js",
   "scripts": {
     "dev": "ts-node src/index.ts",
-    "build": "tsc && npm pack --pack-destination ./dist"
+    "build": "tsc"
   },
   "bin": {
     "autocut": "./bin/index.js"

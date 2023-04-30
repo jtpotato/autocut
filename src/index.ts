@@ -14,9 +14,10 @@ async function main() {
     const movFiles = files.filter((file) =>
       extensions.some((ext) => file.toLowerCase().endsWith(ext))
     );
-    const concatList = movFiles.map((file) => `file ${file}`).join("\n");
+    const concatList = movFiles
+      .map((file) => `file ${file.replace(/ /g, "\\ ")}`)
+      .join("\n");
     await fs.writeFile("concat-list.txt", concatList);
-    await execPromise(`sed -i "s/\"/'/g" concat-list.txt`)
 
     // Use ffmpeg to concatenate the videos and output merged.mp4
     console.log(emphasis("Concatenating videos 🪄"));
@@ -24,7 +25,7 @@ async function main() {
       .toLocaleString()
       .replaceAll(/[^0-9]+/g, "-")}.mp4`;
     await execPromise(
-      `ffmpeg -f concat -safe 0 -i concat-list.txt -c:v copy ${outputFileName}`
+      `ffmpeg -f concat -safe 0 -i concat-list.txt -c:v copy -c:a copy ${outputFileName}`
     );
 
     // Print the list of concatenated videos
@@ -33,7 +34,7 @@ async function main() {
 
     // Use auto-editor to apply editing and export to final-cut-pro format
     console.log(emphasis("Applying edits 🎬"));
-    await execPromise(`auto-editor  --export final-cut-pro --margin 0.1sec`);
+    await execPromise(`auto-editor ${outputFileName} --export final-cut-pro --margin 0.1sec`);
 
     // Clean up concat-list.txt
     await fs.unlink("concat-list.txt");
