@@ -1,7 +1,14 @@
-const glob = require("glob")
+import getFileNames from "./utils/getFilenames.js";
 
-function AutoCut(filename) {
+/**
+ * @param {string} filename
+ */
 
+async function AutoCut(filename) {
+    let filenames = await getFileNames(filename)
+    if (filenames.length > 1) {
+        
+    }
 }
 
-export default AutoCut
+export default AutoCut;
