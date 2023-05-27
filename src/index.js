@@ -1,3 +1,5 @@
+#!/usr/bin/node
+
 import cutVideo from "./utils/cutVideo";
 
 if (process.argv[2] === "cut") {
