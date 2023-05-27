@@ -24,5 +24,5 @@ if (process.argv[2] === "setup") {
 }
 
 if (process.argv[2] === undefined || process.argv[2] === "help") {
-  console.log("Usage: auto-editor <command> <filename(s)>");
+  console.log("Usage: autocut <command> <filename(s)>");
 }
