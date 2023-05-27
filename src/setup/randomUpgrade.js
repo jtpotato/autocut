@@ -1,4 +1,4 @@
-import setup from "./setup"
+import setup from "./setup.js"
 
 function randomUpgrade() {
     if (Math.random() > 0.9) {
