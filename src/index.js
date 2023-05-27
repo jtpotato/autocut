@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
-import cutVideo from "./utils/cutVideo.js";
+import cutVideo from "./cut/cutVideo.js";
 
 if (process.argv[2] === "cut") {
   const args = process.argv.slice(3);
