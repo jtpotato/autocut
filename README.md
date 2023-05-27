@@ -19,3 +19,7 @@ autocut cut ./*.mov # Cuts all .mov files in directory
 ```bash
 autocut subtitle ./render.mov # Generates an .srt file in the same directory as the file.
 ```
+
+---
+
+GUI version coming soon! If exams don't get in the way...
