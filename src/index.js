@@ -1,6 +1,6 @@
-#!/usr/bin/node
+#!/usr/bin/env node
 
-import cutVideo from "./utils/cutVideo";
+import cutVideo from "./utils/cutVideo.js";
 
 if (process.argv[2] === "cut") {
   const args = process.argv.slice(3);
@@ -8,4 +8,8 @@ if (process.argv[2] === "cut") {
   args.forEach((filename) => {
     cutVideo(filename);
   });
+}
+
+if (process.argv[2] === undefined) {
+  console.log("Usage: auto-editor cut <filename>");
 }
