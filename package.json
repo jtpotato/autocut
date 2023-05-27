@@ -5,9 +5,13 @@
   "main": "src/index.js",
   "type": "module",
   "scripts": {
-    "start": "node src/test.js"
+    "start": "node src/index.js"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "discord.js": "^14.11.0",
+    "log-timestamp": "^0.3.0"
+  }
 }
