@@ -13,6 +13,10 @@ function subtitleVideo(filename) {
     "srt",
     "--output_dir",
     path.dirname(filename),
+    "--max_line_width",
+    "40",
+    "--max_line_count",
+    "1",
     "--verbose",
     "False"
   ]);
