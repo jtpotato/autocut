@@ -1,5 +1,7 @@
 import { spawn } from "child_process";
 import path from "path";
+import fs from "fs";
+import jsonToSrt from "./jsonToSrt.js";
 
 /**
  * @param {string} filename
@@ -13,8 +15,10 @@ function subtitleVideo(filename) {
     "srt",
     "--output_dir",
     path.dirname(filename),
+    "--word_timestamps",
+    "True",
     "--max_line_width",
-    "40",
+    "8",
     "--max_line_count",
     "1",
     "--verbose",
@@ -35,6 +39,9 @@ function subtitleVideo(filename) {
 
   whisper.on("close", (code) => {
     console.log(`${filename} Completed with code ${code}`);
+
+    // Check if filename.json was created
+    jsonToSrt(filename);
   });
 }
 
